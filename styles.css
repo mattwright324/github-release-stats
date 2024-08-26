@@ -1,0 +1,44 @@
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+}
+
+.navbar {
+    font-size: 1.5rem !important;
+}
+
+.navbar-brand {
+    font-size: 1.75rem !important;
+}
+
+.navbar-brand img {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+#submit {
+    height: 58px;
+    width: 58px;
+}
+
+#submit {
+    border-radius: 58px;
+}
+
+tr.group td,
+tr.group:hover td {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+:root.dark tr.group td,
+:root.dark tr.group:hover td {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.group {
+    font-weight: bold;
+}

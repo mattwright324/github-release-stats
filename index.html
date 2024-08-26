@@ -1,0 +1,62 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GitHub Release Stats</title>
+    <link rel="icon" href="./img/icon.png"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.4/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/2.1.4/js/dataTables.js"></script>
+
+    <link href="{{ site.baseurl }}/styles.css?v={{ site.time | date_to_xmlschema }}" rel="stylesheet"/>
+    <script src="{{ site.baseurl }}/script.js?v={{ site.time | date_to_xmlschema }}" type="text/javascript"></script>
+
+    <!-- Analytics -->
+    <script defer data-domain="mattw.io" src="https://plausible.io/js/plausible.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="./img/icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            <span style="padding-left: .75rem;">GitHub Release Stats</span>
+        </a>
+    </div>
+</nav>
+<div class="container mt-5">
+    <div class="row flex-nowrap justify-content-md-center">
+        <div class="col">
+            <div class="form-floating mb-3">
+                <input id="username" type="text" class="form-control" placeholder="">
+                <label for="username">GitHub Username</label>
+            </div>
+        </div>
+        <div class="col-auto">
+            <button id="submit" type="button" class="btn btn-outline-primary"><i class="bi bi-search"></i></button>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <h3><i class="bi bi-download"></i> Projects with Downloads</h3>
+    <table id="results" class="table table-responsive"></table>
+</div>
+<div class="container mt-5">
+    <h3><i class="bi bi-archive"></i> Projects without Downloads</h3>
+    <ul id="withoutReleases"></ul>
+</div>
+<div class="row mb-5 mt-5">
+    <div class="twelve columns" style="color:darkgray; text-align: center">
+        mattwright324 | 2025 | <a href="/">home</a> | <a href="https://github.com/mattwright324">github</a>
+    </div>
+</div>
+</body>
+</html>
